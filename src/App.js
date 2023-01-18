@@ -7,7 +7,7 @@ function App() {
     <div className="Apps">
       <h1>React App</h1>
       <Greetings name="John" className="greetings" id="id-greetings" />
-      <Button text="Hello Button" type='button' className='btn' id='btn-id' />
+      <Button text="Hello Button" className='btn-own' id='btn-id' />
     </div>
   );
 }

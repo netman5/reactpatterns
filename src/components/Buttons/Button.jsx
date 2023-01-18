@@ -1,8 +1,10 @@
 import React from 'react'
+import '../../App.css'
 
-const Button = ({ text, ...buttonProps }) => {
+const Button = ({ text, className, ...buttonProps }) => {
+  const classNames = ['btn', className].filter(Boolean).join(' ')
   return (
-    <button {...buttonProps}>{text}</button>
+    <button className={classNames} {...buttonProps}>{text}</button>
   )
 }
 

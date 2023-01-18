@@ -3,8 +3,13 @@
 }
 
 .btn {
-  color: black;
   padding: 10px 14px;
-  background-color: aqua;
+  background-color: white;
   border-radius: 5px;
+}
+
+.btn-own {
+  color: black;
+  background-color: aqua;
+  border: none;
 }
