@@ -4,7 +4,7 @@ import '../../App.css'
 const Button = ({ text, className, ...buttonProps }) => {
   const classNames = ['btn', className].filter(Boolean).join(' ')
   return (
-    <button className={classNames} {...buttonProps}>{text}</button>
+    <button type='button' className={classNames} {...buttonProps}>{text}</button>
   )
 }
 
