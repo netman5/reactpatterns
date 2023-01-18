@@ -2,6 +2,9 @@ import './App.css';
 import Button from './components/Buttons/Button';
 import PrimaryBtn, { SecondaryBtn, TertiaryBtn } from './components/Buttons/PrimaryBtn';
 import Greetings from './components/Greetings/Greetings';
+import HorizontalSplit from './components/Layouts/HorizontalSplit';
+import LeftSide from './components/Layouts/LeftSide';
+import RightSide from './components/Layouts/RightSide';
 
 function App() {
   const login = true;
@@ -15,6 +18,8 @@ function App() {
       <PrimaryBtn text="Hello Primary Button" className='btn-own' id='btn-pry' />
       <SecondaryBtn text="Hello Secondary Button" className='scondary-btn' id='btn-sec' />
       <TertiaryBtn text="Hello Tertiary Button" className='tertiary-Btn' id='btn-ter' />
+
+      <HorizontalSplit startSide={<LeftSide />} endSide={<RightSide />} />
     </div>
   );
 }
