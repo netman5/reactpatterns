@@ -5,9 +5,17 @@ import Greetings from './components/Greetings/Greetings';
 import HorizontalSplit from './components/Layouts/HorizontalSplit';
 import LeftSide from './components/Layouts/LeftSide';
 import RightSide from './components/Layouts/RightSide';
+import useFetch from './components/Hooks/useFetch';
 
 function App() {
+  const [data, loading] = useFetch('https://jsonplaceholder.typicode.com/users');
   const login = true;
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  console.log(data);
   return (
     <div className="Apps">
       <h1>React App</h1>

@@ -2,6 +2,7 @@ import React from 'react'
 
 const LeftSide = () => {
   const [test, setTest] = React.useState('')
+
   return (
     <div>
       LeftSide
