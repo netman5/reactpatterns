@@ -1,15 +1,14 @@
 import axios from 'axios';
 import React from 'react'
 
-const useFetch = (url) => {
-  const [data, setData] = React.useState([]);
+export const useFetchById = (url, id) => {
+  const [data, setData] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
 
   const fetchData = React.useCallback(async (url) => {
-    const response = await axios(url);
+    const response = await axios(`${url}/${id}`);
     return response.data;
-  }, []);
-
+  }, [id]);
 
   React.useEffect(() => {
     setLoading(true);
@@ -19,9 +18,7 @@ const useFetch = (url) => {
         setLoading(false);
       }
       );
-  }, [url, fetchData]);
+  }, [url, id, fetchData]);
 
   return [data, loading];
 }
-
-export default useFetch

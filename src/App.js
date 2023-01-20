@@ -1,11 +1,13 @@
 import './App.css';
 import Practice from './components/Test/Practice';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
   return (
-    <div>
+    <>
+      <CssBaseline />
       <Practice />
-    </div>
+    </>
   )
 }
 

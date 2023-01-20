@@ -7,6 +7,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './ErrorPage';
+import UserDetail from './routes/UserDetail'
+import { loader as userLoader } from '../src/components/users/Users'
 
 const router = createBrowserRouter([
   {
@@ -14,9 +16,12 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     forceRefresh: false,
-    keyLength: 6,
-    getUserConfirmation: (message, callback) => callback(window.confirm(message)),
-  }
+  },
+  {
+    path: "/users/:id",
+    element: <UserDetail />,
+    // loader: userLoader,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
