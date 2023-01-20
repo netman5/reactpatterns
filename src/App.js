@@ -1,13 +1,10 @@
 import './App.css';
-import Count from './components/Parent/Count';
-import ParentComponent from './components/Parent/ParentComponent';
+import Practice from './components/Test/Practice';
 
 function App() {
   return (
     <div>
-      <h1>My First React App</h1>
-      {/* <ParentComponent /> */}
-      <Count />
+      <Practice />
     </div>
   )
 }
