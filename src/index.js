@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from './ErrorPage';
 import UserDetail from './routes/UserDetail'
-import { loader as userLoader } from '../src/components/users/Users'
+// import { loader as userLoader } from '../src/components/users/Users'
 
 const router = createBrowserRouter([
   {
