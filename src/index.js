@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from './ErrorPage';
 import UserDetail from './routes/UserDetail'
+import FormContainer from './components/Form/FormContainer';
 // import { loader as userLoader } from '../src/components/users/Users'
 
 const router = createBrowserRouter([
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     element: <UserDetail />,
     // loader: userLoader,
   },
+
+  {
+    path: "/users/new",
+    element: <FormContainer />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

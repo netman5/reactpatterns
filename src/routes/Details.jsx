@@ -5,12 +5,14 @@ import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom'
 
 const Details = ({ user, loading, ...props }) => {
   const { name, phone, email, address, company } = user;
+  const navigate = useNavigate();
   return (
     <div {...props}>
-      <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+      <Box mb={5} sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         {loading ? (
           <Skeleton variant="circular">
             <Avatar />
@@ -29,9 +31,8 @@ const Details = ({ user, loading, ...props }) => {
             </Box>
           </Stack>
         )}
-
       </Box>
-      <Button variant='contained' onClick={() => window.history.back()}>Back</Button>
+      <Button variant='contained' onClick={() => navigate(-1)}>Return to users</Button>
     </div>
   )
 }
