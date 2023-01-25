@@ -9,6 +9,7 @@ const FormContainer = () => {
     work: '',
   });
 
+  console.log(data);
   return (
     <div>
       <FormChild onChange={(info) => setData(info)} />
