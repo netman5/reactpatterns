@@ -9,11 +9,12 @@ const Autocomplete = ({ options }) => {
 
   return (
     <Search
+      query={''}
       option={options}
       filteredMethod={filteredMethod}
       render={
-        (option, searchOptions) => (
-          <SearchBox option={option} searchOptions={searchOptions} />
+        (option, searchOptions, query) => (
+          <SearchBox option={option} searchOptions={searchOptions} query={query} />
         )
       }
     />

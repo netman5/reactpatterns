@@ -2,8 +2,10 @@ import React from 'react'
 
 const Search = (props) => {
   const [option, setOptions] = React.useState(props.option);
+  const [query, setQuery] = React.useState('');
 
   const searchOptions = (event) => {
+    setQuery(event.target.value);
     if (event.target.value === '' || event.target.value === null) {
       setOptions(props.option);
       return;
@@ -17,7 +19,7 @@ const Search = (props) => {
     setOptions(results)
   }
 
-  return props.render(option, searchOptions)
+  return props.render(option, searchOptions, query)
 }
 
 export default Search;
