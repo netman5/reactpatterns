@@ -15,7 +15,6 @@ const FormChild = ({ onChange }) => {
     setData({ ...data, [e.target.name]: e.target.value });
   }
 
-
   const handleSubmit = (e) => {
     e.preventDefault()
     onChange(data)

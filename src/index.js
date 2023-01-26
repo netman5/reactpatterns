@@ -9,7 +9,12 @@ import {
 import ErrorPage from './ErrorPage';
 import UserDetail from './routes/UserDetail'
 import FormContainer from './components/Form/FormContainer';
+import Autocomplete from './components/SearchBox/Autocomplete';
 // import { loader as userLoader } from '../src/components/users/Users'
+
+const searchOptionsArr = [
+  'apple', 'banana', 'orange', 'grape', 'mango', 'pineapple', 'strawberry', 'watermelon', 'kiwi', 'pear', 'peach', 'cherry', 'lemon', 'lime', 'blueberry', 'raspberry', 'blackberry', 'apricot', 'avocado', 'coconut', 'fig', 'guava', 'jackfruit', 'lychee', 'mandarin', 'melon', 'nectarine', 'papaya', 'passionfruit', 'persimmon', 'plum', 'pomegranate', 'quince', 'starfruit', 'tangerine', 'tomato', 'cantaloupe', 'honeydew', 'durian', 'pomelo', 'tamarind',
+]
 
 const router = createBrowserRouter([
   {
@@ -27,6 +32,11 @@ const router = createBrowserRouter([
   {
     path: "/users/new",
     element: <FormContainer />,
+  },
+
+  {
+    path: "/search",
+    element: <Autocomplete options={searchOptionsArr} />
   }
 ]);
 
