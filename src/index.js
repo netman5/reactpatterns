@@ -10,6 +10,7 @@ import ErrorPage from './ErrorPage';
 import UserDetail from './routes/UserDetail'
 import FormContainer from './components/Form/FormContainer';
 import Autocomplete from './components/SearchBox/Autocomplete';
+import Posts from './components/Posts/Posts';
 // import { loader as userLoader } from '../src/components/users/Users'
 
 const searchOptionsArr = [
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <Autocomplete options={searchOptionsArr} />
+  },
+
+  {
+    path: "/posts",
+    element: <Posts />,
   }
 ]);
 
