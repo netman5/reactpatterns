@@ -1,5 +1,6 @@
 import React from 'react'
 import FormChild from './FormChild'
+import Input from '../Editable/Input'
 
 const FormContainer = () => {
   const [data, setData] = React.useState({
@@ -13,6 +14,7 @@ const FormContainer = () => {
   return (
     <div>
       <FormChild onChange={(info) => setData(info)} />
+      <Input initialValue={'Deborah Oyewole'} label={'name'} />
     </div>
   )
 }
