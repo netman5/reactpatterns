@@ -11,6 +11,7 @@ import UserDetail from './routes/UserDetail'
 import FormContainer from './components/Form/FormContainer';
 import Autocomplete from './components/SearchBox/Autocomplete';
 import Posts from './components/Posts/Posts';
+import SignUp from './components/Containers/Signup';
 // import { loader as userLoader } from '../src/components/users/Users'
 
 const searchOptionsArr = [
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
   {
     path: "/posts",
     element: <Posts />,
+  },
+
+  {
+    path: '/signup',
+    element: <SignUp />
   }
 ]);
 
